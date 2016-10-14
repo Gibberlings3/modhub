@@ -39,23 +39,23 @@ $suffix = "/releases";
 $url = $apiprefix . $modpath . $suffix;
 $prerelease = -1;
 if (in_array("master", $params)) {
-	// just the master zipball
-	$url = $prefix . "/archive/master.zip";
-	redirect($url);
+  // just the master zipball
+  $url = $prefix . "/archive/master.zip";
+  redirect($url);
 } else if (count($params) == 0 || (count($params) == 1 && in_array("pkg", $params))) {
-	if (in_array("pkg", $params)) {
-		// latest proper release, package
-		$prerelease = 0;
+  if (in_array("pkg", $params)) {
+    // latest proper release, package
+    $prerelease = 0;
   } else {
-		// latest proper release, source
-		$url = $url . "/latest";
-		$json = json_decode(getData($url), TRUE);
-		if (!empty($json["message"])) {
-		  echo "Mod probably has no releases yet, bailing out!\n";
-		  exit(13);
-		}
-		redirect($json['zipball_url']);
-	}
+    // latest proper release, source
+    $url = $url . "/latest";
+    $json = json_decode(getData($url), TRUE);
+    if (!empty($json["message"])) {
+      echo "Mod probably has no releases yet, bailing out!\n";
+      exit(13);
+    }
+    redirect($json['zipball_url']);
+  }
 }
 
 if (in_array("preonly", $params)) {
