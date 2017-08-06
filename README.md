@@ -17,7 +17,8 @@ Version parameters:
  * pre: get whichever (pre)release code is more recent
 
 Package parameters (for mods that provide them):
- * pkg=win: windows package
+ * pkg=win: windows exe package
+ * pkg=wzp: windows zip package
  * pkg=lin: linux package
  * pkg=osx: apple package
 
@@ -53,7 +54,8 @@ The URL printed under Location is the file that you want.
 
 # For mod authors
 If you want the package detection to work, make sure you attach packages to the Github release and mind these patterns:
- * a windows package name should end with "exe"
+ * a windows exe package name should end with "exe"
+ * a windows zip package name should start with "win" and end with "zip"
  * a linux package name should start with "lin"
  * an osx package name should start with "osx"
  
