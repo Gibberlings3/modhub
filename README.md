@@ -15,6 +15,7 @@ Version parameters:
  * master: get the latest code
  * preonly: get the latest prerelease code
  * pre: get whichever (pre)release code is more recent
+ * ifeellucky: get the latest code, master if there is no release (does not support packages)
 
 Package parameters (for mods that provide them):
  * pkg=win: windows exe package
