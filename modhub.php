@@ -51,8 +51,13 @@ if (in_array("master", $params)) {
     $url = $url . "/latest";
     $json = json_decode(getData($url), TRUE);
     if (!empty($json["message"])) {
-      echo "Mod probably has no releases yet, bailing out!\n";
-      exit(13);
+      if (in_array("ifeellucky", $params)) {
+        $url = $prefix . "/archive/master.zip";
+        redirect($url);
+      } else {
+        echo "Mod probably has no releases yet, bailing out!\n";
+        exit(13);
+      }
     }
     redirect($json['zipball_url']);
   }
