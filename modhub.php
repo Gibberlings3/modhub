@@ -42,7 +42,7 @@ if (in_array("master", $params)) {
   // just the master zipball
   $url = $prefix . "/archive/master.zip";
   redirect($url);
-} else if (count($params) == 0 || (count($params) == 1 && in_array("pkg", $params))) {
+} else if (count($params) == 0 || (count($params) == 1 && (in_array("pkg", $params) || in_array("ifeellucky", $params)))) {
   if (in_array("pkg", $params)) {
     // latest proper release, package
     $prerelease = 0;
