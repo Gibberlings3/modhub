@@ -38,6 +38,9 @@ http://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&preonly
 Spell Revisions latest release or prerelease, whichever is fresher:
 http://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&pre
 
+Spell Revisions get latest release or prerelease, if there is no release or prerelease then get the last commit from master branch  
+http://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&ifeellucky
+
 # Usage example
 
 Show the most recent pre-release or release of SpellRevisions for OSX:
