@@ -1,6 +1,5 @@
 <?php
 // Uses latest github api - v3 at the time of writing
-
 // WARNING: change the following line for the script to work (generate a token first!)
 $auth = "github-username:token";
   
@@ -10,7 +9,6 @@ if (empty($modpath)) {
   echo "ERROR: bad input: " . $modpath . " from " . array_keys(strip_tags($_GET));
   exit(12);
 }
-
 function getData($url) {
   $ch = curl_init();
   curl_setopt($ch, CURLOPT_URL, $url);
@@ -27,12 +25,10 @@ function getData($url) {
   curl_close($ch);
   return $data;
 }
-
 function redirect($url) {
   Header("Location: " . $url);
   exit();
 }
-
 $prefix = "https://github.com/" . $modpath;
 $apiprefix = "https://api.github.com/repos/";
 $suffix = "/releases";
@@ -62,20 +58,17 @@ if (in_array("master", $params)) {
     redirect($json['zipball_url']);
   }
 }
-
 if (in_array("preonly", $params)) {
   $prerelease = 2;
 } else if ($prerelease < 0) { // promoted as "pre", but any garbage would do
   // whichever is latest - release or prerelease
   $prerelease = 1;
 }
-
 // only got here if there were other parameters (possibly invalid)
 // now to distinguish latest prerelease and latest (pre)release (use either) and handle packages
 $json = getData($url);
 $releases = json_decode($json, TRUE);
-
-$osregex = array("lin" => "/^lin/i", "osx" => "/^osx/i", "win" => "/exe$/i", "wzp" => "/^win.*zip$/i");
+$osregex = array("lin" => "/^lin-/i", "osx" => "/^osx-/i", "win" => "/\.exe$/i", "wzp" => "/^win-.*\.zip$/i", "uzp" => "/^.*\.zip$/i");
 foreach ($releases as $release) {
   //print_r($release);
   if ($release["prerelease"] != 1 && $prerelease == 2) {
@@ -103,5 +96,4 @@ foreach ($releases as $release) {
     redirect($release['zipball_url']);
   }
 }
-
 ?>
