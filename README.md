@@ -1,5 +1,5 @@
 # modhub
-Microservice to find the latest or latest (pre)release version of a mod hosted on GitHub
+Microservice to find the latest commit or latest (pre)release version of a mod hosted on GitHub
 
 It will automatically redirect to the desired archive. Defaults to archived code of the latest proper release.
 
@@ -18,10 +18,11 @@ Version parameters:
  * ifeellucky: get the latest code, master if there is no release (does not support packages)
 
 Package parameters (for mods that provide them):
- * pkg=win: windows exe package
- * pkg=wzp: windows zip package
- * pkg=lin: linux package
- * pkg=osx: apple package
+ * pkg=uzp: Universal zip package, works for Windows, macOS, Linux
+ * pkg=win: Windows exe package
+ * pkg=wzp: Windows zip package
+ * pkg=lin: Linux package
+ * pkg=osx: macOS package
 
 Note that the pkg parameter does not work with master mode.
 
@@ -58,12 +59,15 @@ The URL printed under Location is the file that you want.
 
 # For mod authors
 If you want the package detection to work, make sure you attach packages to the Github release and mind these patterns:
+ * a universal zip package name should end with "zip"
  * a windows exe package name should end with "exe"
  * a windows zip package name should start with "win" and end with "zip"
  * a linux package name should start with "lin"
  * an osx package name should start with "osx"
  
-For an example, check [a release](https://github.com/Gibberlings3/Tweaks-Anthology/releases/tag/Beta_5) of Tweaks-Anthology.
+WARNING: for uzip, if there are multiple zip files (except those with 'win-', 'osx-', 'lin-' prefixes) in the release, behaviour is undefined.
+
+For an example, check [a release](https://github.com/Gibberlings3/Tweaks-Anthology/releases/latest) of Tweaks-Anthology.
  
 # For developers
 If you want to deploy this somewhere, you'll have to get a Github token and insert it into the $auth variable.
