@@ -8,8 +8,8 @@ Construct the desired url and follow it.
 
 ## Parameters
 Base url: http://lynxlynx.info/ie/modhub.php (or wherever the file is hosted)
- * First parameter: ?githubName/modRepositoryName (eg. Gibberlings3/SongAndSilence)
- * All other parameters: &parameterName=value
+ * first parameter: ?githubName/modRepositoryName (eg. Gibberlings3/SongAndSilence)
+ * all other parameters: &parameterName=value
 
 Version parameters:
  * master: get the latest code
@@ -44,7 +44,7 @@ http://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&ifeellucky
 
 # Usage example
 
-Show the most recent pre-release or release of SpellRevisions for OSX:
+Show the most recent pre-release or release of SpellRevisions for macOS:
 
     $  curl -I "http://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&pkg=osx&pre"
     HTTP/1.1 302 Moved Temporarily
@@ -59,11 +59,11 @@ The URL printed under Location is the file that you want.
 
 # For mod authors
 If you want the package detection to work, make sure you attach packages to the Github release and mind these patterns:
- * a universal zip package name should end with ".zip"
- * a windows exe package name should end with ".exe"
- * a windows zip package name should start with "win-" and end with ".zip"
- * a linux package name should start with "lin-"
- * an osx package name should start with "osx-"
+ * universal zip package name should end with ".zip"
+ * windows exe package name should end with ".exe"
+ * windows zip package name should start with "win-" and end with ".zip"
+ * linux package name should start with "lin-"
+ * macOS package name should start with "osx-"
  
 WARNING: for uzp, if there are multiple .zip files (except those with 'win-', 'osx-', 'lin-' prefixes) in the release, behaviour is undefined.
 
