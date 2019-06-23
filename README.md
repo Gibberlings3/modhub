@@ -59,13 +59,13 @@ The URL printed under Location is the file that you want.
 
 # For mod authors
 If you want the package detection to work, make sure you attach packages to the Github release and mind these patterns:
- * a universal zip package name should end with "zip"
- * a windows exe package name should end with "exe"
- * a windows zip package name should start with "win" and end with "zip"
- * a linux package name should start with "lin"
- * an osx package name should start with "osx"
+ * a universal zip package name should end with ".zip"
+ * a windows exe package name should end with ".exe"
+ * a windows zip package name should start with "win-" and end with ".zip"
+ * a linux package name should start with "lin-"
+ * an osx package name should start with "osx-"
  
-WARNING: for uzp, if there are multiple zip files (except those with 'win-', 'osx-', 'lin-' prefixes) in the release, behaviour is undefined.
+WARNING: for uzp, if there are multiple .zip files (except those with 'win-', 'osx-', 'lin-' prefixes) in the release, behaviour is undefined.
 
 For an example, check [a release](https://github.com/Gibberlings3/Tweaks-Anthology/releases/latest) of Tweaks-Anthology.
  
