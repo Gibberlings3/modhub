@@ -65,7 +65,7 @@ If you want the package detection to work, make sure you attach packages to the 
  * a linux package name should start with "lin"
  * an osx package name should start with "osx"
  
-WARNING: for uzip, if there are multiple zip files (except those with 'win-', 'osx-', 'lin-' prefixes) in the release, behaviour is undefined.
+WARNING: for uzp, if there are multiple zip files (except those with 'win-', 'osx-', 'lin-' prefixes) in the release, behaviour is undefined.
 
 For an example, check [a release](https://github.com/Gibberlings3/Tweaks-Anthology/releases/latest) of Tweaks-Anthology.
  
