@@ -42,7 +42,7 @@ http://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&master
 Spell Revisions latest release or prerelease, if there is no release or prerelease then fallback to the last commit from master branch:  
 http://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&ifeellucky
 
-Spell Revisions universal zip package from latest release:
+ModPackage ExampleMod universal zip package from latest release:
 http://lynxlynx.info/ie/modhub.php?InfinityMods/ModPackage&pkg=uzp
 
 Spell Revisions windows zip package from latest release:
