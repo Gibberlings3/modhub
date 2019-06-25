@@ -43,7 +43,7 @@ Spell Revisions latest release or prerelease, if there is no release or prerelea
 http://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&ifeellucky
 
 Spell Revisions universal zip package from latest release:
-http://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&pkg=uzp
+http://lynxlynx.info/ie/modhub.php?InfinityMods/ModPackage&pkg=uzp
 
 Spell Revisions windows zip package from latest release:
 http://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&pkg=win
