@@ -57,7 +57,7 @@ http://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&pkg=lin&pre
 
 # Usage example
 
-Get the link of the most recent macOS package for SpellRevisions release pre-release, whichever of them is newer:
+Get the link to the most recent macOS (pre-)release package of SpellRevisions:
 
     curl -I "https://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&pkg=osx&pre"
     HTTP/1.1 302 Moved Temporarily
