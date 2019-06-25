@@ -7,7 +7,7 @@ It will automatically redirect to the desired archive. Defaults to archived code
 Construct the desired URL and open it with a browser or other tool.
 
 ## Parameters
-Base url: http://lynxlynx.info/ie/modhub.php (or wherever the file is hosted)
+Base url: https://lynxlynx.info/ie/modhub.php (or wherever the file is hosted)
  * first parameter: ?githubName/modRepositoryName (eg. Gibberlings3/SongAndSilence)
  * all other parameters: &parameterName=value
 
@@ -31,29 +31,30 @@ Spell Revisions latest release:
 http://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions
 
 Spell Revisions latest prerelease:  
-http://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&preonly
+https://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&preonly
 
 Spell Revisions latest release or prerelease, whichever of them is newer:  
-http://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&pre
+https://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&pre
 
 Spell Revisions latest master commit (unpackaged):  
-http://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&master
+https://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&master
 
 Spell Revisions latest release or prerelease, if there is no release or prerelease then fallback to the last commit from master branch:  
-http://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&ifeellucky
-
-ModPackage ExampleMod universal zip package from latest release:
-http://lynxlynx.info/ie/modhub.php?InfinityMods/ModPackage&pkg=uzp
+https://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&ifeellucky
 
 Spell Revisions windows zip package from latest release:
-http://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&pkg=win
+https://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&pkg=win
 
 Spell Revisions macOS zip package from latest prerelease:
-http://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&pkg=osx&preonly
+https://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&pkg=osx&preonly
 
 Spell Revisions Linux zip package from latest release or prerelease, whichever of them is newer:
-http://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&pkg=lin&pre
+https://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&pkg=lin&pre
 
+ModPackage example mod universal zip package from latest release:
+https://lynxlynx.info/ie/modhub.php?InfinityMods/ModPackage&pkg=uzp
+
+**WARNING**: if there are multiple zip files in the release (excluding those with 'win-', 'osx-', 'lin-' prefixes), the uzp fetching behaviour is undefined.
 
 # Usage example
 
@@ -73,8 +74,7 @@ The URL printed under Location is the file that you want.
 
 # For mod authors
 If you want the package detection to work, make sure you attach packages to the Github release and mind these patterns:
- * universal zip package name should end with ".zip"  
- WARNING: if there are multiple .zip files in the release (excluding those with 'win-', 'osx-', 'lin-' prefixes), the behaviour is undefined.
+ * universal zip package name should end with ".zip" and it should be the only non-prefixed (see below) zip file present
  * windows exe package name should end with ".exe"
  * windows zip package name should start with "win-" and end with ".zip"
  * macOS package name should start with "osx-"
