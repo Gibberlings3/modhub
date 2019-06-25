@@ -4,7 +4,7 @@ Microservice to find the latest release, prerelease, or latest commit of a mod h
 It will automatically redirect to the desired archive. Defaults to archived code of the latest proper release.
 
 # Usage
-Construct the desired url and open it inside browser or use for commandline tool.
+Construct the desired URL and open it with a browser or other tool.
 
 ## Parameters
 Base url: http://lynxlynx.info/ie/modhub.php (or wherever the file is hosted)
