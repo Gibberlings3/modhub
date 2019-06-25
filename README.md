@@ -80,7 +80,7 @@ If you want the package detection to work, make sure you attach packages to the 
  * macOS package name should start with "osx-"
  * linux package name should start with "lin-"
 
-For an real life example, check [latest release](https://github.com/Gibberlings3/Tweaks-Anthology/releases/latest) of Tweaks Anthology.
+For an real life example, check the [release](https://github.com/Gibberlings3/Tweaks-Anthology/releases/latest) of Tweaks Anthology.
  
 # For developers
 If you want to deploy this somewhere, you'll have to get a Github token and insert it into the $auth variable.
