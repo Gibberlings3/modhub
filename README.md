@@ -52,9 +52,9 @@ Spell Revisions Linux zip package from latest release or prerelease, whichever o
 https://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&pkg=lin&pre
 
 ModPackage example mod universal zip package from latest release:
-https://lynxlynx.info/ie/modhub.php?InfinityMods/ModPackage&pkg=uzp
+https://lynxlynx.info/ie/modhub.php?InfinityMods/ModPackage&pkg=zip
 
-**WARNING**: if there are multiple zip files in the release (excluding those with 'win-', 'osx-', 'lin-' prefixes), the uzp fetching behaviour is undefined.
+**WARNING**: if there are multiple zip files in the release (excluding those with 'win-', 'osx-', 'lin-' prefixes), the 'zip' fetching behavior is undefined.
 
 # Usage example
 
