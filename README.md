@@ -18,7 +18,7 @@ Version parameters:
  * ifeellucky: get the latest code, master if there is no release (does not support packages)
 
 Package parameters (for mods that provide them):
- * pkg=uzp: Universal zip package, works for Windows, macOS, Linux
+ * pkg=zip: Universal zip package, works for Windows, macOS, Linux
  * pkg=win: Windows exe package
  * pkg=wzp: Windows zip package
  * pkg=osx: macOS package
