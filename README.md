@@ -19,6 +19,7 @@ Version parameters:
 
 Package parameters (for mods that provide them):
  * pkg=zip: Universal zip package, works for Windows, macOS, Linux
+ * pkg=zip: Universal iemod package, works for Windows, macOS, Linux
  * pkg=win: Windows exe package
  * pkg=wzp: Windows zip package
  * pkg=osx: macOS package
@@ -51,6 +52,9 @@ https://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&pkg=osx&preonly
 Spell Revisions Linux zip package from latest release or prerelease, whichever of them is newer:
 https://lynxlynx.info/ie/modhub.php?Gibberlings3/SpellRevisions&pkg=lin&pre
 
+ModPackage example mod universal iemod package from latest release:
+https://lynxlynx.info/ie/modhub.php?InfinityMods/ModPackage&pkg=iemod
+
 ModPackage example mod universal zip package from latest release:
 https://lynxlynx.info/ie/modhub.php?InfinityMods/ModPackage&pkg=zip
 
@@ -75,6 +79,7 @@ The URL printed under Location is the file that you want.
 # For mod authors
 If you want the package detection to work, make sure you attach packages to the Github release and mind these patterns:
  * universal zip package name should end with ".zip" and it should be the only non-prefixed (see below) zip file present
+ * universal iemod package name should end with ".iemod"
  * windows exe package name should end with ".exe"
  * windows zip package name should start with "win-" and end with ".zip"
  * macOS package name should start with "osx-"
