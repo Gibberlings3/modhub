@@ -3,7 +3,7 @@
 
 // WARNING: change the following line for the script to work (generate a token first!)
 $auth = "github-username:token";
-  
+
 $params = array_keys($_GET);
 $modpath = strip_tags(array_shift($params));
 if (empty($modpath)) {
@@ -14,7 +14,7 @@ if (empty($modpath)) {
 function getData($url) {
   $ch = curl_init();
   curl_setopt($ch, CURLOPT_URL, $url);
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
   curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 1);
   curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
   curl_setopt($ch, CURLOPT_USERAGENT, 'IE mod link fetcher');
@@ -75,7 +75,7 @@ if (in_array("preonly", $params)) {
 $json = getData($url);
 $releases = json_decode($json, TRUE);
 
-$osregex = array("lin" => "/^lin-/i", "osx" => "/^osx-/i", "win" => "/\.exe$/i", "wzp" => "/^win-.*\.zip$/i", "zip" => "/^(?!win-|osx-|lin-|wzp-).*\.zip$/i");
+$osregex = array("lin" => "/^lin-/i", "osx" => "/^osx-/i", "win" => "/\.exe$/i", "wzp" => "/^win-.*\.zip$/i", "zip" => "/^(?!win-|osx-|lin-|wzp-).*\.zip$/i", "iemod" => "/\.iemod$/i");
 foreach ($releases as $release) {
   //print_r($release);
   if ($release["prerelease"] != 1 && $prerelease == 2) {
