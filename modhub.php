@@ -75,7 +75,7 @@ if (in_array("preonly", $params)) {
 $json = getData($url);
 $releases = json_decode($json, TRUE);
 
-$osregex = array("lin" => "/^lin-/i", "osx" => "/^osx-/i", "win" => "/\.exe$/i", "wzp" => "/^win-.*\.zip$/i", "zip" => "/^(?!win-|osx-|lin-|wzp-).*\.zip$/i");
+$osregex = array("lin" => "/^lin-/i", "osx" => "/^osx-/i", "win" => "/\.exe$/i", "wzp" => "/^win-.*\.zip$/i", "zip" => "/^(?!win-|osx-|lin-|wzp-).*\.zip$/i", "iemod" => "/\.iemod$/i");
 foreach ($releases as $release) {
   //print_r($release);
   if ($release["prerelease"] != 1 && $prerelease == 2) {
