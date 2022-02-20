@@ -34,6 +34,16 @@ function redirect($url) {
   exit();
 }
 
+// if needed, retry with _ -> ., since php doesn't allow them
+// triggered by eg. GraionDilach/Neverwinter-Nights-Voice-Pack-for-EE-2.6
+function unfsckdot($url, $json) {
+  if (!empty($json["message"])) {
+    $url = str_replace("_", ".", $url);
+    $json = json_decode(getData($url), TRUE);
+  }
+  return $json;
+}
+
 $prefix = "https://github.com/" . $modpath;
 $apiprefix = "https://api.github.com/repos/";
 $suffix = "/releases";
@@ -51,6 +61,7 @@ if (in_array("master", $params)) {
     // latest proper release, source
     $url = $url . "/latest";
     $json = json_decode(getData($url), TRUE);
+    $json = unfsckdot($url, $json);
     if (!empty($json["message"])) {
       if (in_array("ifeellucky", $params)) {
         $url = $prefix . "/archive/master.zip";
@@ -73,8 +84,8 @@ if (in_array("preonly", $params)) {
 
 // only got here if there were other parameters (possibly invalid)
 // now to distinguish latest prerelease and latest (pre)release (use either) and handle packages
-$json = getData($url);
-$releases = json_decode($json, TRUE);
+$json = json_decode(getData($url), TRUE);
+$releases = unfsckdot($url, $json);
 
 $osregex = array("lin" => "/^lin-/i", "osx" => "/^osx-/i", "win" => "/\.exe$/i", "wzp" => "/^win-.*\.zip$/i", "zip" => "/^(?!win-|osx-|lin-|wzp-).*\.zip$/i", "iemod" => "/\.iemod$/i");
 foreach ($releases as $release) {
