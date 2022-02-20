@@ -20,9 +20,10 @@ function getData($url) {
   curl_setopt($ch, CURLOPT_USERAGENT, 'IE mod link fetcher');
   curl_setopt($ch, CURLOPT_HTTPHEADER, Array("Accept: application/vnd.github.v3+json"));
   curl_setopt($ch, CURLOPT_USERPWD, $auth);
+  curl_setopt($ch, CURLOPT_VERBOSE, true);
   $data = curl_exec($ch);
   if (curl_errno($ch)) {
-    echo '<br>Curl error: ' . curl_error($ch);
+    echo 'Curl error: ' . curl_error($ch) . "\n... while trying to fetch $url\n";
   }
   curl_close($ch);
   return $data;
