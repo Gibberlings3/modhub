@@ -104,10 +104,13 @@ foreach ($releases as $release) {
     // platform specific package download, eg.:
     // /releases/download/v4b12/spell_rev-v4-beta12.exe
     $version = $release['tag_name'];
-    $os = $_GET["pkg"];
-    foreach ($release["assets"] as $package) {
-      if (preg_match($osregex[$os], $package["name"])) {
-        redirect($package["browser_download_url"]);
+    // support a csv list, trying each package in turn
+    $pkgs = explode(",", $_GET["pkg"]);
+    foreach ($pkgs as $os) {
+      foreach ($release["assets"] as $package) {
+        if (preg_match($osregex[$os], $package["name"])) {
+          redirect($package["browser_download_url"]);
+        }
       }
     }
   } else {
