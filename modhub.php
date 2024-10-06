@@ -117,6 +117,9 @@ foreach ($releases as $release) {
     // grab the source
     redirect($release['zipball_url']);
   }
+
+  // mark error if nothing was found
+  http_response_code(404);
 }
 
 ?>
