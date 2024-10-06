@@ -25,7 +25,8 @@ Package parameters (for mods that provide them):
  * pkg=osx: macOS package
  * pkg=lin: Linux package
 
-Note that the pkg parameter does not work with master mode.
+Note that the pkg parameter does not work with master mode. You can provide a comma separated list
+and packages will be tried in turn until one is found, e.g. `pkg=win,wzp,zip`.
 
 ## Url examples
 Spell Revisions latest release:  
@@ -59,6 +60,9 @@ ModPackage example mod universal zip package from latest release:
 https://lynxlynx.info/ie/modhub.php?InfinityMods/ModPackage&pkg=zip
 
 **WARNING**: if there are multiple zip files in the release (excluding those with 'win-', 'osx-', 'lin-' prefixes), the 'zip' fetching behavior is undefined.
+
+BGT Tweak Pack windows exe or windows zip package if the exe isn't found, both from latest release:
+https://lynxlynx.info/ie/modhub.php?Spellhold-Studios/BGT-Tweak-Pack&pkg=win,wzp
 
 # Usage example
 
