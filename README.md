@@ -7,23 +7,23 @@ It will automatically redirect to the desired archive. Defaults to archived code
 Construct the desired URL and open it with a browser or other tool.
 
 ## Parameters
-Base url: https://lynxlynx.info/ie/modhub.php (or wherever the file is hosted)
- * first parameter: ?githubName/modRepositoryName (eg. Gibberlings3/SongAndSilence)
- * all other parameters: &parameterName=value
+Base url: `https://lynxlynx.info/ie/modhub.php` (or wherever the file is hosted)
+ * first parameter: `?githubName/modRepositoryName` (eg. Gibberlings3/SongAndSilence)
+ * all other parameters: `&parameterName=value`
 
 Version parameters:
- * master: get the latest code
- * preonly: get the latest prerelease code
- * pre: get whichever release or prerelease code is more recent
- * ifeellucky: get the latest code, master if there is no release (does not support packages)
+ * `master`: get the latest code
+ * `preonly`: get the latest prerelease code
+ * `pre`: get whichever release or prerelease code is more recent
+ * `ifeellucky`: get the latest code, master if there is no release (does not support packages)
 
 Package parameters (for mods that provide them):
- * pkg=iemod: Universal iemod package, works for Windows, macOS, Linux
- * pkg=zip: Universal zip package, works for Windows, macOS, Linux
- * pkg=win: Windows exe package
- * pkg=wzp: Windows zip package
- * pkg=mac or pkg=osx: macOS package
- * pkg=lin: Linux package
+ * `pkg=iemod`: Universal iemod package, works for Windows, macOS, Linux
+ * `pkg=zip`: Universal zip package, works for Windows, macOS, Linux
+ * `pkg=win`: Windows exe package
+ * `pkg=wzp`: Windows zip package
+ * `pkg=mac` or `pkg=osx`: macOS package
+ * `pkg=lin`: Linux package
 
 Note that the pkg parameter does not work with master mode. You can provide a comma separated list
 and packages will be tried in turn until one is found, e.g. `pkg=win,wzp,zip`.
