@@ -22,7 +22,7 @@ Package parameters (for mods that provide them):
  * pkg=zip: Universal zip package, works for Windows, macOS, Linux
  * pkg=win: Windows exe package
  * pkg=wzp: Windows zip package
- * pkg=osx: macOS package
+ * pkg=mac or pkg=osx: macOS package
  * pkg=lin: Linux package
 
 Note that the pkg parameter does not work with master mode. You can provide a comma separated list
